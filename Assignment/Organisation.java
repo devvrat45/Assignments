@@ -48,7 +48,17 @@ public class Organisation {
 			}
 		}
 	}
-	
+	public static void allemployeeDept() {
+		System.out.println("All Departments of employees");
+		for (Employee e: emps) {
+			
+			if(e.getDept()!= null) {
+				
+				System.out.println(e.getName()+" : "+e.getDept().getName());
+			}
+			
+		}
+	}
 	
 	public static void main(String args[]) {
 	
@@ -94,7 +104,7 @@ public class Organisation {
 		System.out.println("Asha belongs to dept:"+ depName);
 		
 		notDeptEmployee();
-		
+		allemployeeDept();
 		
 }
 
