@@ -4,7 +4,7 @@ public class ATM {
 	
 	private double withdrawLimit;
 	private double totalAmount;
-	//private int pin ;
+	
 	
 	private Account acct;
 	
