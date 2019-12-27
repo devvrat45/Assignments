@@ -18,6 +18,7 @@ public class MyCollections {
 	
 	
 	public static int findStudent(List<Student> list, String name ) {
+	
 		for(Student s:list) {
 			if(s.getName().equalsIgnoreCase(name)) {
 				return s.getRoll();
