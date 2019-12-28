@@ -66,7 +66,7 @@ public class Organisation {
 		System.out.println("Showing all Employees under a paricular HR/Manager");
 		for(Employee s: emps) {
 			if(s.getManager()!= null) {
-				if(s.getManager().equalsIgnoreCase(name)) {
+				if(s.getManager().getName().equalsIgnoreCase(name)) {
 					System.out.println(s.getName());
 				}
 			}
@@ -84,24 +84,26 @@ public class Organisation {
 		Department development =new Department("DEVELOPMENT","Delhi");
 		Department testing =new Department("TESTING","Hyderabad");
 
-		//List<Employee> emps = new ArrayList<>(); 
-
-		Employee dev = new Employee("Dev",101,60000,"Developer",development,"Tarana");
-		Employee avi = new Employee("Avi",102,60000,"Developer",development,"Tarana");
-
-		Employee sid = new Employee("Sid",111,40000.00,"testing",testing,"Tarana");
-		Employee tara = new Employee("Tara",112,40000.00,"testing",testing,"Surbhi");
-
-		Employee ashim = new Employee("Ashim",103,60000.00,"Developer",development,"Surbhi");
-		Employee karan = new Employee("Karan",104,60000.00,"Developer",development,"Surbhi");
-
-
+		//List<Employee> emps = new ArrayList<>();
 
 		Employee tarana = new Employee("Tarana",121,80000.00,"HR",hr,null);
 		Employee surbhi = new Employee("Surbhi",122,80000.00,"HR",hr,null);
 
 		addEmployee(tarana);
 		addEmployee(surbhi);
+
+		Employee dev = new Employee("Dev",101,60000,"Developer",development,tarana);
+		Employee avi = new Employee("Avi",102,60000,"Developer",development,tarana);
+
+		Employee sid = new Employee("Sid",111,40000.00,"testing",testing,tarana);
+		Employee tara = new Employee("Tara",112,40000.00,"testing",testing,surbhi);
+
+		Employee ashim = new Employee("Ashim",103,60000.00,"Developer",development,surbhi);
+		Employee karan = new Employee("Karan",104,60000.00,"Developer",development,surbhi);
+
+
+
+
 
 		addEmployee(dev);
 		addEmployee(avi);

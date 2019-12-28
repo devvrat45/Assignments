@@ -7,16 +7,16 @@ public class Employee {
 	protected double salary;
 	protected String role;
 	protected Department dept;
-	protected String manager;
+	protected Employee manager;
 	protected boolean increase;
-	public Employee(String name, int id, double salary, String role, Department dept, String manager) {
+	public Employee(String name, int id, double salary, String role, Department dept, Employee manager) {
 		this.name = name;
 		this.id = id;
 		this.salary = salary;
 		this.role = role;
 		this.dept = dept;
 		this.manager = manager;
-		this.increase=false;
+		increase=false;
 	}
 	public String getName() {
 		return name;
@@ -48,10 +48,10 @@ public class Employee {
 	public void setDept(Department dept) {
 		this.dept = dept;
 	}
-	public String getManager() {
+	public Employee getManager() {
 		return manager;
 	}
-	public void setManager(String manager) {
+	public void setManager(Employee manager) {
 		this.manager = manager;
 	}
 	
